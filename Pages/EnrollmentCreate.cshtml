@@ -1,0 +1,33 @@
+﻿@page
+@model StudentManagementRazorClientApp.Pages.EnrollmentCreateModel
+@{
+    ViewData["Title"] = "Create Enrollment";
+}
+
+<h1>Create a New Enrollment</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="NewEnrollment.StudentId">Student</label>
+        <select asp-for="NewEnrollment.StudentId" class="form-control" asp-items="Model.StudentOptions"></select>
+        <span asp-validation-for="NewEnrollment.StudentId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewEnrollment.CourseId">Course</label>
+        <select asp-for="NewEnrollment.CourseId" class="form-control" asp-items="Model.CourseOptions"></select>
+        <span asp-validation-for="NewEnrollment.CourseId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewEnrollment.Joiningdate">Joining Date</label>
+        <input asp-for="NewEnrollment.Joiningdate" class="form-control" type="date" />
+        <span asp-validation-for="NewEnrollment.Joiningdate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Create</button>
+</form>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}

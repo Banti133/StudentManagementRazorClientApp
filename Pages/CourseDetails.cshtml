@@ -1,0 +1,15 @@
+﻿@page "{id:int}"
+@model StudentManagementRazorClientApp.Pages.CourseDetailsModel
+@{
+    ViewData["Title"] = "Course Details";
+}
+
+<h1>Course Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.CourseDetails.Title</h5>
+        <p class="card-text">Credit: @Model.CourseDetails.Credit</p>
+        <a asp-page="/CourseList" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

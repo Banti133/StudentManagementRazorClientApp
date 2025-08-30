@@ -1,0 +1,15 @@
+﻿@page "{id:int}"
+@model StudentManagementRazorClientApp.Pages.StudentDetailsModel
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<h1>Student Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.StudentDetails.Name</h5>
+        <p class="card-text">Age: @Model.StudentDetails.Age</p>
+        <a asp-page="/StudentList" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@page "{id:int}"
+@model StudentManagementRazorClientApp.Pages.EnrollmentDetailsModel
+@{
+    ViewData["Title"] = "Enrollment Details";
+}
+
+<h1>Enrollment Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Student: @Model.EnrollmentDetails.Student?.Name</h5>
+        <p class="card-text">Course: @Model.EnrollmentDetails.Course?.Title</p>
+        <p class="card-text">Joining Date: @Model.EnrollmentDetails.Joiningdate.ToString("yyyy-MM-dd")</p>
+        <a asp-page="/EnrollmentList" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 text-primary">Welcome to Student Management</h1>
+        <p class="lead text-muted">Manage students, courses, and enrollments with ease.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100 hover-card bg-gradient-primary text-white">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-graduate fa-3x mb-3"></i>
+                    <h5 class="card-title">Student List</h5>
+                    <p class="card-text">View and manage all registered students.</p>
+                    <a asp-page="/StudentList" class="btn btn-light">Go to Students</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100 hover-card bg-gradient-success text-white">
+                <div class="card-body text-center">
+                    <i class="fas fa-book fa-3x mb-3"></i>
+                    <h5 class="card-title">Course List</h5>
+                    <p class="card-text">Browse and edit available courses.</p>
+                    <a asp-page="/CourseList" class="btn btn-light">Go to Courses</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100 hover-card bg-gradient-info text-white">
+                <div class="card-body text-center">
+                    <i class="fas fa-clipboard-list fa-3x mb-3"></i>
+                    <h5 class="card-title">Enrollment List</h5>
+                    <p class="card-text">Track student enrollments in courses.</p>
+                    <a asp-page="/EnrollmentList" class="btn btn-light">Go to Enrollments</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #007bff, #00c6ff);
+    }
+
+    .bg-gradient-success {
+        background: linear-gradient(135deg, #28a745, #85dcb0);
+    }
+
+    .bg-gradient-info {
+        background: linear-gradient(135deg, #17a2b8, #6dd5ed);
+    }
+
+    .hover-card:hover {
+        transform: scale(1.03);
+        transition: transform 0.3s ease;
+    }
+</style>

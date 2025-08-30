@@ -1,0 +1,29 @@
+﻿@page "{id:int}"
+@model StudentManagementRazorClientApp.Pages.StudentEditModel
+@{
+    ViewData["Title"] = "Edit Student";
+}
+
+<h1>Edit Student</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="EditStudent.StudentId" />
+
+    <div class="form-group">
+        <label asp-for="EditStudent.Name">Name</label>
+        <input asp-for="EditStudent.Name" class="form-control" />
+        <span asp-validation-for="EditStudent.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EditStudent.Age">Age</label>
+        <input asp-for="EditStudent.Age" class="form-control" type="number" />
+        <span asp-validation-for="EditStudent.Age" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

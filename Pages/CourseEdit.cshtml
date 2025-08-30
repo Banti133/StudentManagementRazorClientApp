@@ -1,0 +1,29 @@
+﻿@page "{id:int}"
+@model StudentManagementRazorClientApp.Pages.CourseEditModel
+@{
+    ViewData["Title"] = "Edit Course";
+}
+
+<h1>Edit Course</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="EditCourse.CourseId" />
+
+    <div class="form-group">
+        <label asp-for="EditCourse.Title">Course Title</label>
+        <input asp-for="EditCourse.Title" class="form-control" />
+        <span asp-validation-for="EditCourse.Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EditCourse.Credit">Credit</label>
+        <input asp-for="EditCourse.Credit" class="form-control" type="number" />
+        <span asp-validation-for="EditCourse.Credit" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
